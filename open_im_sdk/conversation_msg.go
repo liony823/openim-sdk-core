@@ -157,6 +157,10 @@ func RevokeMessage(callback open_im_sdk_callback.Base, operationID string, conve
 	call(callback, operationID, IMUserContext.Conversation().RevokeMessage, conversationID, clientMsgID)
 }
 
+func EditMessage(callback open_im_sdk_callback.Base, operationID string, conversationID, clientMsgID, newContent string, contentType int32) {
+	call(callback, operationID, IMUserContext.Conversation().EditMessage, conversationID, clientMsgID, newContent, contentType)
+}
+
 func TypingStatusUpdate(callback open_im_sdk_callback.Base, operationID string, recvID string, msgTip string) {
 	call(callback, operationID, IMUserContext.Conversation().TypingStatusUpdate, recvID, msgTip)
 }

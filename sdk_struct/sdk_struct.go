@@ -44,6 +44,21 @@ type MessageRevoked struct {
 	Ex                          string `json:"ex"`
 	IsAdminRevoke               bool   `json:"isAdminRevoke"`
 }
+type MessageEdited struct {
+	EditorID                    string `json:"editorID"`
+	EditorRole                  int32  `json:"editorRole"`
+	ClientMsgID                 string `json:"clientMsgID"`
+	EditorNickname              string `json:"editorNickname"`
+	EditTime                    int64  `json:"editTime"`
+	SourceMessageSendTime       int64  `json:"sourceMessageSendTime"`
+	SourceMessageSendID         string `json:"sourceMessageSendID"`
+	SourceMessageSenderNickname string `json:"sourceMessageSenderNickname"`
+	SessionType                 int32  `json:"sessionType"`
+	Seq                         int64  `json:"seq"`
+	NewContent                  string `json:"newContent"`
+	ContentType                 int32  `json:"contentType"`
+	IsAdminEdit                 bool   `json:"isAdminEdit"`
+}
 type MessageReaction struct {
 	ClientMsgID  string `json:"clientMsgID"`
 	ReactionType int    `json:"reactionType"`

@@ -214,6 +214,10 @@ func (e *emptyAdvancedMsgListener) OnNewRecvMessageRevoked(messageRevoked string
 	log.ZWarn(e.ctx, "AdvancedMsgListener is not implemented", nil, "messageRevoked", messageRevoked)
 }
 
+func (e *emptyAdvancedMsgListener) OnNewRecvMessageEdited(messageEdited string) {
+	log.ZWarn(e.ctx, "AdvancedMsgListener is not implemented", nil, "messageEdited", messageEdited)
+}
+
 func (e *emptyAdvancedMsgListener) OnMsgEdited(msg string) {
 	log.ZWarn(e.ctx, "OnMsgEdited is not implemented", nil, "msg", msg)
 }

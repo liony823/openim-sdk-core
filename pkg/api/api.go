@@ -47,6 +47,7 @@ var (
 	ClearAllMsg                      = newApi[msg.UserClearAllMsgReq, msg.UserClearAllMsgResp]("/msg/user_clear_all_msg")                 // Clear all messages of the current user
 	DeleteMsgs                       = newApi[msg.DeleteMsgsReq, msg.DeleteMsgsResp]("/msg/delete_msgs")                                  // Delete the specified message
 	RevokeMsg                        = newApi[msg.RevokeMsgReq, msg.RevokeMsgResp]("/msg/revoke_msg")
+	EditMsg                          = newApi[msg.EditMsgReq, msg.EditMsgResp]("/msg/edit_msg")
 	MarkMsgsAsRead                   = newApi[msg.MarkMsgsAsReadReq, msg.MarkMsgsAsReadResp]("/msg/mark_msgs_as_read")
 	GetConversationsHasReadAndMaxSeq = newApi[msg.GetConversationsHasReadAndMaxSeqReq, msg.GetConversationsHasReadAndMaxSeqResp]("/msg/get_conversations_has_read_and_max_seq")
 	MarkConversationAsRead           = newApi[msg.MarkConversationAsReadReq, msg.MarkConversationAsReadResp]("/msg/mark_conversation_as_read")

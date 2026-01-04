@@ -164,6 +164,8 @@ func (c *Conversation) doNotification(ctx context.Context, msg *sdkws.MsgData) e
 		return c.doBusinessNotification(ctx, msg)
 	case constant.RevokeNotification: // 2101
 		return c.doRevokeMsg(ctx, msg)
+	case constant.EditNotification: // 2102
+		return c.doEditMsg(ctx, msg)
 	case constant.ClearConversationNotification: // 1703
 		return c.doClearConversations(ctx, msg)
 	case constant.DeleteMsgsNotification:

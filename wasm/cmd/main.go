@@ -99,6 +99,7 @@ func registerFunc() {
 	js.Global().Set("findMessageList", js.FuncOf(wrapperConMsg.FindMessageList))
 
 	js.Global().Set("revokeMessage", js.FuncOf(wrapperConMsg.RevokeMessage))
+	js.Global().Set("editMessage", js.FuncOf(wrapperConMsg.EditMessage))
 	js.Global().Set("typingStatusUpdate", js.FuncOf(wrapperConMsg.TypingStatusUpdate))
 	js.Global().Set("deleteMessageFromLocalStorage", js.FuncOf(wrapperConMsg.DeleteMessageFromLocalStorage))
 	js.Global().Set("deleteMessage", js.FuncOf(wrapperConMsg.DeleteMessage))

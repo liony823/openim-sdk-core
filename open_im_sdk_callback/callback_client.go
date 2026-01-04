@@ -71,6 +71,7 @@ type OnAdvancedMsgListener interface {
 	OnRecvNewMessage(message string)
 	OnRecvC2CReadReceipt(msgReceiptList string)
 	OnNewRecvMessageRevoked(messageRevoked string)
+	OnNewRecvMessageEdited(messageEdited string)
 	OnRecvOfflineNewMessage(message string)
 	OnMsgDeleted(message string)
 	OnRecvOnlineOnlyMessage(message string)

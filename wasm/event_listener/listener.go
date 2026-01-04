@@ -133,9 +133,18 @@ func (a AdvancedMsgCallback) OnRecvMessageRevoked(msgID string) {
 	a.CallbackWriter.SetEvent(utils.GetSelfFuncName()).SetData(msgID).SendMessage()
 }
 
+func (a AdvancedMsgCallback) OnMsgEdited(message string) {
+	a.CallbackWriter.SetEvent(utils.GetSelfFuncName()).SetData(message).SendMessage()
+}
+
 func (a AdvancedMsgCallback) OnNewRecvMessageRevoked(messageRevoked string) {
 	a.CallbackWriter.SetEvent(utils.GetSelfFuncName()).SetData(messageRevoked).SendMessage()
 }
+
+func (a AdvancedMsgCallback) OnNewRecvMessageEdited(messageEdited string) {
+	a.CallbackWriter.SetEvent(utils.GetSelfFuncName()).SetData(messageEdited).SendMessage()
+}
+
 func (a AdvancedMsgCallback) OnRecvMessageModified(message string) {
 	a.CallbackWriter.SetEvent(utils.GetSelfFuncName()).SetData(message).SendMessage()
 }
@@ -167,10 +176,6 @@ func (a AdvancedMsgCallback) OnMsgDeleted(message string) {
 }
 
 func (a AdvancedMsgCallback) OnRecvOnlineOnlyMessage(message string) {
-	a.CallbackWriter.SetEvent(utils.GetSelfFuncName()).SetData(message).SendMessage()
-}
-
-func (a AdvancedMsgCallback) OnMsgEdited(message string) {
 	a.CallbackWriter.SetEvent(utils.GetSelfFuncName()).SetData(message).SendMessage()
 }
 

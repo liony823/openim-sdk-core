@@ -49,6 +49,11 @@ func (c *Conversation) revokeMessageFromServer(ctx context.Context, conversation
 	return api.RevokeMsg.Execute(ctx, req)
 }
 
+func (c *Conversation) editMessageOnServer(ctx context.Context, conversationID string, seq int64, newContent string, contentType int32) error {
+	req := &pbMsg.EditMsgReq{UserID: c.loginUserID, ConversationID: conversationID, Seq: seq, NewContent: newContent, ContentType: contentType}
+	return api.EditMsg.Execute(ctx, req)
+}
+
 func (c *Conversation) getHasReadAndMaxSeqsFromServer(ctx context.Context, conversationIDs ...string) (*pbMsg.GetConversationsHasReadAndMaxSeqResp, error) {
 	req := pbMsg.GetConversationsHasReadAndMaxSeqReq{UserID: c.loginUserID, ConversationIDs: conversationIDs}
 	return api.GetConversationsHasReadAndMaxSeq.Invoke(ctx, &req)

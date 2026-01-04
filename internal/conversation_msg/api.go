@@ -814,6 +814,10 @@ func (c *Conversation) RevokeMessage(ctx context.Context, conversationID, client
 	return c.revokeOneMessage(ctx, conversationID, clientMsgID)
 }
 
+func (c *Conversation) EditMessage(ctx context.Context, conversationID, clientMsgID, newContent string, contentType int32) error {
+	return c.editOneMessage(ctx, conversationID, clientMsgID, newContent, contentType)
+}
+
 func (c *Conversation) TypingStatusUpdate(ctx context.Context, recvID, msgTip string) error {
 	return c.typingStatusUpdate(ctx, recvID, msgTip)
 }

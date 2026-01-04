@@ -126,6 +126,9 @@ func (m *MsgListenerCallBak) OnRecvGroupReadReceipt(groupMsgReceiptList string) 
 func (m *MsgListenerCallBak) OnNewRecvMessageRevoked(messageRevoked string) {
 }
 
+func (m *MsgListenerCallBak) OnNewRecvMessageEdited(messageEdited string) {
+}
+
 func (m *MsgListenerCallBak) OnRecvMessageExtensionsChanged(msgID string, reactionExtensionList string) {
 
 }

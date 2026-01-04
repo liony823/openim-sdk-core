@@ -212,6 +212,11 @@ func (w *WrapperConMsg) RevokeMessage(_ js.Value, args []js.Value) interface{} {
 	return event_listener.NewCaller(open_im_sdk.RevokeMessage, callback, &args).AsyncCallWithCallback()
 }
 
+func (w *WrapperConMsg) EditMessage(_ js.Value, args []js.Value) interface{} {
+	callback := event_listener.NewBaseCallback(utils.FirstLower(utils.GetSelfFuncName()), w.commonFunc)
+	return event_listener.NewCaller(open_im_sdk.EditMessage, callback, &args).AsyncCallWithCallback()
+}
+
 func (w *WrapperConMsg) TypingStatusUpdate(_ js.Value, args []js.Value) interface{} {
 	callback := event_listener.NewBaseCallback(utils.FirstLower(utils.GetSelfFuncName()), w.commonFunc)
 	return event_listener.NewCaller(open_im_sdk.TypingStatusUpdate, callback, &args).AsyncCallWithCallback()

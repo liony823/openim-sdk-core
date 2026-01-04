@@ -1,8 +1,6 @@
 module github.com/openimsdk/openim-sdk-core/v3
 
-go 1.23.0
-
-toolchain go1.24.0
+go 1.24.0
 
 require (
 	github.com/coder/websocket v1.8.13
@@ -14,7 +12,7 @@ require (
 	gorm.io/driver/sqlite v1.5.5
 )
 
-require golang.org/x/net v0.39.0 // indirect
+require golang.org/x/net v0.48.0 // indirect
 
 require (
 	github.com/google/go-cmp v0.6.0
@@ -22,8 +20,8 @@ require (
 	github.com/openimsdk/protocol v0.0.73-alpha.12
 	github.com/openimsdk/tools v0.0.50-alpha.80
 	github.com/patrickmn/go-cache v2.1.0+incompatible
-	golang.org/x/image v0.26.0
-	golang.org/x/sync v0.13.0
+	golang.org/x/image v0.34.0
+	golang.org/x/sync v0.19.0
 	gorm.io/gorm v1.25.10
 )
 
@@ -35,8 +33,13 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
-	golang.org/x/sys v0.32.0 // indirect
-	golang.org/x/text v0.24.0 // indirect
+	golang.org/x/mobile v0.0.0-20251209145715-2553ed8ce294 // indirect
+	golang.org/x/mod v0.31.0 // indirect
+	golang.org/x/sys v0.39.0 // indirect
+	golang.org/x/text v0.32.0 // indirect
+	golang.org/x/tools v0.40.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240903143218-8af14fe29dc1 // indirect
 	google.golang.org/grpc v1.68.0 // indirect
 )
+
+replace github.com/openimsdk/protocol => ../protocol

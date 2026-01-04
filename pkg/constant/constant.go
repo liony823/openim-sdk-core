@@ -42,6 +42,8 @@ const (
 	Card                            = 108
 	Location                        = 109
 	Custom                          = 110
+	Revoke                          = 111
+	Edit                            = 112
 	Typing                          = 113
 	Quote                           = 114
 	Face                            = 115
@@ -106,8 +108,9 @@ const (
 	BusinessNotification = 2001
 
 	RevokeNotification = 2101
+	EditNotification   = 2102
 
-	DeleteMsgsNotification = 2102
+	DeleteMsgsNotification = 2103
 
 	HasReadReceipt = 2200
 
